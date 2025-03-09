@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'PKMN';
+  src: url('fonts/PKMN-Mystery-Dungeon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(-45deg,
+  rgb(223, 86, 12), rgb(223, 149, 12), rgb(218, 218, 11), rgb(12, 210, 12), rgb(12, 210, 210), rgb(12, 144, 210));
+  background-size: 400% 400%;
+  animation: arcoiris 50s linear infinite;
+  font-family: 'PKMN', cursive;
+}
+
+@keyframes arcoiris {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+}
+
+.transition {
+  animation: transicion 1s linear;
+}
+
+@keyframes transicion {
+    0% {opacity: 1;}
+    55% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#intro-pkmn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 69;
+}
+
+.box {
+  background-color: #173958;
+  color: #f0ede3;
+  border-bottom: 8px solid #4e6ed1;
+  border-top: 8px solid #4e6ed1;
+  border-left: 16px solid #4e6ed1;
+  border-right: 16px solid #4e6ed1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px 30px;
+
+  @media (max-width: 768px) {
+    margin: 10px 10px;
+  }
+}
+
+.volume-container {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 8px;
+  text-align: center;
+  width: 88px;
+}
+
+.progress-container {
+  width: 15px;
+  height: 100px;
+  background: #6F2DBD;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 50%;
+  background: #4c1f83;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+h1 {
+  font-size: 60px;
+  text-shadow: 1.8px 1.8px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 42px;
+    text-shadow: 1.5px 1.5px 0 #000;
+  }
+}
+
+h2 {
+  font-size: 42px;
+  text-shadow: 1.5px 1.5px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    text-shadow: 1.3px 1.3px 0 #000;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  text-shadow: 1.3px 1.3px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+    text-shadow: 1px 1px 0 #000;
+  }
+}
+
+.form-label, input, textarea, p {
+  color: #f0ede3;
+  font-size: 22px;
+  text-shadow: 1px 1px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    text-shadow: 1px 1px 0 #000;
+  }
+}
