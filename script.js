@@ -2,6 +2,7 @@ const intro = document.getElementById('intro-pkmn');
 const audio = document.getElementById('audio-pkmn');
 const icons = document.querySelectorAll(".next-icon");
 const formulario = document.getElementById('form');
+const volumeBar = document.querySelector(".volume-progress");
 
 intro.addEventListener('click', enterPage);
 
@@ -24,6 +25,11 @@ form.addEventListener('submit', (event) => {
         icon: 'success',
         confirmButtonText: 'OK!'
     });
+});
+
+volumeBar.addEventListener("click", (event) => {
+    // Bajar/Subir volumen
+    // Actualizar el % visual
 });
 
 function enterPage() {
