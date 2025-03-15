@@ -11,16 +11,21 @@
     <header class="container text-center my-5">
         <div id="intro-pkmn">
             <h2>Bienvenido a mi pagina! :D</h2>
-            <img class="next-icon" src="fonts/next.png" alt="Pulsa para continuar">
+            <img class="next-icon" src="fonts/continue.png" alt="Pulsa para continuar">
         </div>
         <div class="box">
             <div>
-                <h1>M09-UF3-AC4</h1>
+                <h1>M09-UF3</h1>
                 <p>
                     Estilo inspirado en el 
                     <a href="https://www.youtube.com/watch?v=mETuBRzoISk" target="_blank">
                         Questionario de Pokemon Mystery Dungeon: Blue Rescue Team
                     </a>
+                    <div>
+                        <a href="#galeria" class="btn lime-color">GALERIA</a>
+                        <a href="#video" class="btn red-color">VIDEO</a>
+                        <a href="#formulario" class="btn purple-color">FORMULARIO</a>
+                    </div>
                 </p>
             </div>
         </div>
@@ -38,32 +43,94 @@
     </div>
 
     <div class="container">
-        <div class="box">
+        <div id="galeria" class="lime box">
             <h3 class="text-center">Galeria de Imagenes</h3>
-            
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner d-flex justify-content-center align-items-center">
+                  <div class="carousel-item active">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" >
+                        <rect x="50" y="50" width="300" height="200" fill="Cyan"/>
+                        <rect x="50" y="250" width="300" height="75" fill="Yellowgreen"/>
+                        <circle cx="90" cy="90" r="20" fill="Yellow"/>
+                        <rect x="125" y="155" width="150" height="125" fill="#FAD7B5"/>
+                        <rect x="135" y="180" width="35" height="35" fill="White"/>
+                        <rect x="230" y="180" width="35" height="35" fill="White"/>
+                        <rect x="185" y="230" width="35" height="50" fill="Brown"/>
+                        <circle cx="190" cy="255" r="2.5" fill="Yellow"/>
+                        <polygon points="125,155 200,75 275,155" fill="#C4A484" />
+                    </svg>
+                  </div>
+                  <div class="carousel-item">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" >
+                        <rect x="50" y="50" width="300" height="275" fill="#D3D3D3"/>
+                        <rect x="110" y="170" width="175" height="60" fill="Red"/>
+                        <rect x="145" y="130" width="100" height="60" fill="Red"/>
+                        <rect x="155" y="140" width="35" height="25" fill="Cyan"/>
+                        <rect x="200" y="140" width="35" height="25" fill="Cyan"/>
+                        <rect x="270" y="185" width="15" height="15" fill="Yellow"/>
+                        <rect x="110" y="185" width="15" height="15" fill="Yellow"/>
+                        <circle cx="150" cy="225" r="25" fill="Black"/>
+                        <circle cx="150" cy="225" r="13" fill="Grey"/>
+                        <circle cx="240" cy="225" r="25" fill="Black"/>
+                        <circle cx="240" cy="225" r="13" fill="Grey"/>
+                    </svg>
+                  </div>
+                  <div class="carousel-item">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" >
+                        <rect x="50" y="50" width="300" height="275" fill="#E8E8E8"/>
+                        <rect x="145" y="105" width="110" height="85" fill="Grey" rx="10"/>
+                        <rect x="160" y="205" width="80" height="95" fill="Grey"/>
+                        <rect x="120" y="220" width="160" height="15" fill="Grey"/>
+                        <rect x="195" y="75" width="6.5" height="35" fill="Grey"/>
+                        <circle cx="198" cy="75" r="6.5" fill="Red"/>
+                        <circle cx="180" cy="140" r="12" fill="Yellowgreen"/>
+                        <circle cx="180" cy="140" r="6.5" fill="White"/>
+                        <circle cx="220" cy="140" r="12" fill="Yellowgreen"/>
+                        <circle cx="220" cy="140" r="6.5" fill="White"/>
+                        <circle cx="200" cy="285" r="6.5" fill="Blue"/>
+                        <circle cx="200" cy="260" r="6.5" fill="Yellowgreen"/>
+                        <circle cx="200" cy="235" r="6.5" fill="Red"/>
+                    </svg>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <img class="next-icon" src="fonts/prev.png" alt="Anterior">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <img class="next-icon" src="fonts/next.png" alt="Siguiente">
+                </button>
+              </div>              
         </div>
 
-        <div class="box">
+        <div id="video" class="red box d-flex flex-column justify-content-center align-items-center">
             <h3 class="text-center">Video</h3>
-            
+            <video class="default d-flex justify-content" controls>
+                <source src="https://www.dropbox.com/scl/fi/na53gq1vk30cz5hc9g1sg/gatitos.mp4?rlkey=k9qt60h70l7pcirvj39o4q5lk&st=19bzmxig&raw=1" type="video/mp4">
+            </video>
         </div>
 
-        <div class="box">
+        <div id="formulario" class="purple box">
             <h3 class="text-center">Formulario de Contacto</h3>
             <form id="form">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <label for="name" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electronico</label>
-                    <input type="email" class="form-control" id="email" required>
+                    <label for="email" class="form-label">Correo Electronico:</label>
+                    <input type="email" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" required></textarea>
+                    <label for="message" class="form-label">Mensaje:</label>
+                    <input type="text" class="form-control" required>
                 </div>
-                <button type="submit" class="btn">Enviar</button>
+                <div class="mb-3 d-flex flex-row justify-content-center align-items-center">
+                    <img class="next-icon" src="fonts/next.png" width="24" height="24">
+                    <button type="submit" class="btn">ENVIAR</button>
+                </div>
             </form>
         </div>
     </div>
@@ -71,9 +138,11 @@
     <footer class="container text-center my-5">
         <div class="box text-center">
             <h3>Redes Sociales</h3>
-            <a href="#" class="btn">Facebook</a>
-            <a href="#" class="btn">Twitter</a>
-            <a href="#" class="btn">Instagram</a>
+            <div class="socials d-flex justify-content-center">
+                <a href="https://x.com/PMDGang" target="_blank"><img class="social-icon" src="fonts/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/mysterydungeonguild/" target="_blank"><img class="social-icon" src="fonts/instagram.png" alt="Instagram"></a>
+                <a href="https://www.reddit.com/r/MysteryDungeon/" target="_blank"><img class="social-icon" src="fonts/reddit.png" alt="Reddit"></a>
+            </div>
         </div>
     </footer>
 

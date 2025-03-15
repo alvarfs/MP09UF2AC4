@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @font-face {
   font-family: 'PKMN';
   src: url('fonts/PKMN-Mystery-Dungeon.ttf') format('truetype');
@@ -7,10 +9,10 @@
 
 body {
   background: linear-gradient(-45deg,
-  red, orange, yellow, lime, cyan, blue);
+  rgb(223, 86, 12), rgb(223, 149, 12), rgb(218, 218, 11), rgb(12, 210, 12), rgb(12, 210, 210), rgb(12, 144, 210));
   background-size: 400% 400%;
-  animation: arcoiris 40s linear infinite;
-  font-family: 'PKMN', cursive;
+  animation: arcoiris 50s linear infinite;
+  font-family: 'PKMN', 'Press Start 2P', cursive;
 }
 
 @keyframes arcoiris {
@@ -18,11 +20,13 @@ body {
   50% { background-position: 100% 100%; }
 }
 
-.transition { animation: transicion 1s linear; }
+.transition {
+  animation: transicion 1s linear;
+}
 
 @keyframes transicion {
     0% {opacity: 1;}
-    50% {opacity: 0;}
+    55% {opacity: 0;}
     100% {opacity: 0;}
 }
 
@@ -55,7 +59,9 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 30px 30px;
 
-  @media (max-width: 768px) { margin: 10px 10px; }
+  @media (max-width: 768px) {
+    margin: 10px 10px;
+  }
 }
 
 .volume-container {
@@ -67,7 +73,7 @@ body {
   width: 88px;
 }
 
-.volume-progress {
+.progress-container {
   width: 15px;
   height: 100px;
   background: #6F2DBD;
@@ -76,7 +82,7 @@ body {
   cursor: pointer;
 }
 
-.volume-bar {
+.progress-bar {
   width: 100%;
   height: 50%;
   background: #4c1f83;
@@ -86,36 +92,48 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  color: yellow;
+  font-size: 82px;
   text-shadow: 1.8px 1.8px 0 #000;
 
   @media (max-width: 768px) {
-    font-size: 42px;
+    font-size: 60px;
     text-shadow: 1.5px 1.5px 0 #000;
   }
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 54px;
   text-shadow: 1.5px 1.5px 0 #000;
 
   @media (max-width: 768px) {
-    font-size: 36px;
+    font-size: 42px;
     text-shadow: 1.3px 1.3px 0 #000;
   }
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 40px;
   text-shadow: 1.3px 1.3px 0 #000;
 
   @media (max-width: 768px) {
-    font-size: 22px;
+    font-size: 32px;
     text-shadow: 1px 1px 0 #000;
   }
 }
 
-.form-label, input, textarea, p {
+.form-label {
+  color: yellow;
+  font-size: 28px;
+  text-shadow: 1.3px 1.3px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #000;
+  }
+}
+
+p {
   color: #f0ede3;
   font-size: 22px;
   text-shadow: 1px 1px 0 #000;
@@ -125,3 +143,108 @@ h3 {
     text-shadow: 1px 1px 0 #000;
   }
 }
+
+input[type="text"], input[type="email"] {
+  background-color: #173958;
+  color: #f0ede3;
+  border: none;
+  border-bottom: 2px solid lime;
+  outline: none;
+  border-radius: 0px;
+  box-shadow: 0 2px 0 black;
+  font-size: 26px;
+  padding: 0px;
+  text-shadow: 1.5px 1.5px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    text-shadow: 1.3px 1.3px 0 #000;
+  }
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  background-color: #173958;
+  color: #f0ede3;
+  border: none;
+  border-bottom: 2px solid lime;
+  outline: none;
+  border-radius: 0px;
+  box-shadow: 0 2px 0 black;
+  font-size: 26px;
+  padding: 0px;
+  text-shadow: 1.5px 1.5px 0 #000;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    text-shadow: 1.3px 1.3px 0 #000;
+  }
+}
+
+video {
+  width: 640px;
+  height: 360px;
+  border-radius: 10px;
+
+  @media (max-width: 1168px) { 
+    width: 568px;
+    height: 320px;
+  }
+
+  @media (max-width: 968px) { 
+    width: 512px;
+    height: 288px; 
+  }
+
+  @media (max-width: 768px) { 
+    width: 320px;
+    height: 180px; 
+  }
+}
+
+.btn {
+  color: white;
+  font-size: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover { color: yellow; }
+
+.default {
+  border-bottom: 8px solid #4e6ed1;
+  border-top: 8px solid #4e6ed1;
+  border-left: 16px solid #4e6ed1;
+  border-right: 16px solid #4e6ed1;
+}
+
+.lime {
+  border-bottom: 8px solid #48a82b;
+  border-top: 8px solid #48a82b;
+  border-left: 16px solid #48a82b;
+  border-right: 16px solid #48a82b;
+}
+
+.red {
+  border-bottom: 8px solid #c92525;
+  border-top: 8px solid #c92525;
+  border-left: 16px solid #c92525;
+  border-right: 16px solid #c92525;
+}
+
+.purple {
+  border-bottom: 8px solid #a615c3;
+  border-top: 8px solid #a615c3;
+  border-left: 16px solid #a615c3;
+  border-right: 16px solid #a615c3;
+}
+
+.lime-color { color: lime; }
+.red-color { color: red; }
+.purple-color { color: purple; }
+
+.socials { gap: 15px; }
+.social-icon { border-radius: 8px; }
+.carousel-item { right: 200px; }
+.swal2-container { font-family: 'Press Start 2P', 'PKMN', cursive; }
+.mb-3 { margin: 3%; }
+
