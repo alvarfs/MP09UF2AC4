@@ -2,13 +2,20 @@ const intro = document.getElementById('intro-pkmn');
 const audio = document.getElementById('audio-pkmn');
 const icons = document.querySelectorAll(".next-icon");
 const formulario = document.getElementById('form');
-const volumeBar = document.querySelector(".volume-progress");
+const volumeContainer = document.querySelector(".volume-container");
+const volumeIcon = document.getElementById("volume-icon");
+const volumeBar = document.querySelector(".volume-bar");
+const volumeSelected = document.querySelector(".volume-selected");
 
+let isDragging = false;
+
+volumeIcon.hidden = false;
+volumeBar.hidden = true;
 intro.addEventListener('click', enterPage);
 
 setInterval( () => {
     icons.forEach( (icon) => {
-        if (icon.style.visibility === "hidden") {
+        if (icon.style.visibility == "hidden") {
             icon.style.visibility = "visible";
         } else {
             icon.style.visibility = "hidden";
@@ -27,10 +34,47 @@ form.addEventListener('submit', (event) => {
     });
 });
 
-volumeBar.addEventListener("click", (event) => {
-    // Bajar/Subir volumen
-    // Actualizar el % visual
+volumeContainer.addEventListener("mouseenter", () => {
+    volumeIcon.hidden = true;
+    volumeBar.hidden = false;
+    isDragging = false;
 });
+
+volumeContainer.addEventListener("mouseleave", () => {
+    volumeIcon.hidden = false;
+    volumeBar.hidden = true;
+    isDragging = false;
+});
+
+volumeContainer.addEventListener("touchstart", () => {
+    volumeIcon.hidden = true;
+    volumeBar.hidden = false;
+    isDragging = false;
+});
+
+volumeBar.addEventListener("mousedown", (event) => {
+    isDragging = true;
+    updateVolume(event);
+});
+
+window.addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
+window.addEventListener("mousemove", (event) => {
+    if (isDragging) {
+        updateVolume(event);
+    }
+});
+
+function updateVolume(event) {
+    const barRect = volumeBar.getBoundingClientRect();
+    const newHeight = Math.max(0, Math.min(barRect.bottom - event.clientY, barRect.height));
+
+    const volumePercentage = newHeight / barRect.height;
+    volumeSelected.style.height = `${volumePercentage * 100}%`;
+    audio.volume = volumePercentage;
+}
 
 function enterPage() {
     intro.removeEventListener('click', enterPage);

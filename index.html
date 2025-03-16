@@ -10,23 +10,23 @@
 <body>
     <header class="container text-center my-5">
         <div id="intro-pkmn">
-            <h2>Bienvenido a mi pagina! :D</h2>
+            <h3>Bienvenido a mi pagina! :D</h3>
             <img class="next-icon" src="fonts/continue.png" alt="Pulsa para continuar">
         </div>
         <div class="box">
             <div>
                 <h1>M09-UF3</h1>
                 <p>
-                    Estilo inspirado en el 
-                    <a href="https://www.youtube.com/watch?v=mETuBRzoISk" target="_blank">
-                        Questionario de Pokemon Mystery Dungeon: Blue Rescue Team
+                    Estilo para la pagina inspirado en el 
+                    <a class="url" href="https://www.youtube.com/watch?v=mETuBRzoISk" target="_blank">
+                        Questionario de Pokemon Mystery Dungeon: Rescue Team
                     </a>
-                    <div>
-                        <a href="#galeria" class="btn lime-color">GALERIA</a>
-                        <a href="#video" class="btn red-color">VIDEO</a>
-                        <a href="#formulario" class="btn purple-color">FORMULARIO</a>
-                    </div>
                 </p>
+                <div>
+                    <a href="#galeria" class="btn lime-color">GALERIA</a>
+                    <a href="#video" class="btn red-color">VIDEO</a>
+                    <a href="#formulario" class="btn purple-color">FORMULARIO</a>
+                </div>
             </div>
         </div>
     </header>
@@ -36,10 +36,11 @@
         Tu navegador no soporta el audio.
     </audio>
 
-    <div class="volume-container box">
-        <div class="volume-progress">
-            <div class="volume-bar"></div>
+    <div class="volume-container box d-flex justify-content-center align-items-center">
+        <div class="volume-bar">
+            <div class="volume-selected"></div>
         </div>
+        <img id="volume-icon" src="fonts/volume.png" alt="Volumen">
     </div>
 
     <div class="container">

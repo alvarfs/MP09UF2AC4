@@ -73,7 +73,7 @@ body {
   width: 88px;
 }
 
-.progress-container {
+.volume-bar {
   width: 15px;
   height: 100px;
   background: #6F2DBD;
@@ -82,7 +82,7 @@ body {
   cursor: pointer;
 }
 
-.progress-bar {
+.volume-selected {
   width: 100%;
   height: 50%;
   background: #4c1f83;
@@ -133,7 +133,7 @@ h3 {
   }
 }
 
-p {
+p, a, button {
   color: #f0ede3;
   font-size: 22px;
   text-shadow: 1px 1px 0 #000;
@@ -208,7 +208,7 @@ video {
   cursor: pointer;
 }
 
-.btn:hover { color: yellow; }
+.btn:hover, .url:hover { color: yellow; }
 
 .default {
   border-bottom: 8px solid #4e6ed1;
@@ -244,6 +244,7 @@ video {
 
 .socials { gap: 15px; }
 .social-icon { border-radius: 8px; }
+.social-icon:hover { scale: 1.1; }
 .carousel-item { right: 200px; }
 .swal2-container { font-family: 'Press Start 2P', 'PKMN', cursive; }
 .mb-3 { margin: 3%; }
