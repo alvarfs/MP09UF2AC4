@@ -11,7 +11,7 @@
     <header class="container text-center my-5">
         <div id="intro-pkmn">
             <h3>Bienvenido a mi pagina! :D</h3>
-            <img class="next-icon" src="fonts/continue.png" alt="Pulsa para continuar">
+            <img class="next-icon" src="icons/continue.png" alt="Pulsa para continuar">
         </div>
         <div class="box">
             <div>
@@ -40,11 +40,11 @@
         <div class="volume-bar">
             <div class="volume-selected"></div>
         </div>
-        <img id="volume-icon" src="fonts/volume.png" alt="Volumen">
+        <img id="volume-icon" src="icons/volume.png" alt="Volumen">
     </div>
 
     <div class="container">
-        <div id="galeria" class="lime box">
+        <section id="galeria" class="lime box">
             <h3 class="text-center">Galeria de Imagenes</h3>
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner d-flex justify-content-center align-items-center">
@@ -97,52 +97,58 @@
                     </svg>
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <img class="next-icon" src="fonts/prev.png" alt="Anterior">
+                <button class="next-icon carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <img src="icons/prev.png" alt="Anterior">
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <img class="next-icon" src="fonts/next.png" alt="Siguiente">
+                <button class="next-icon carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <img src="icons/next.png" alt="Siguiente">
                 </button>
               </div>              
-        </div>
+        </section>
 
-        <div id="video" class="red box d-flex flex-column justify-content-center align-items-center">
+        <section id="video" class="red box d-flex flex-column justify-content-center align-items-center">
             <h3 class="text-center">Video</h3>
-            <video class="default d-flex justify-content" controls>
+            <video class="default" controls>
                 <source src="https://www.dropbox.com/scl/fi/na53gq1vk30cz5hc9g1sg/gatitos.mp4?rlkey=k9qt60h70l7pcirvj39o4q5lk&st=19bzmxig&raw=1" type="video/mp4">
             </video>
-        </div>
+        </section>
 
-        <div id="formulario" class="purple box">
+        <section id="formulario" class="purple box">
             <h3 class="text-center">Formulario de Contacto</h3>
             <form id="form">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electronico:</label>
-                    <input type="email" class="form-control" required>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Mensaje:</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" id="message" name="message" required>
                 </div>
                 <div class="mb-3 d-flex flex-row justify-content-center align-items-center">
-                    <img class="next-icon" src="fonts/next.png" width="24" height="24">
+                    <img class="next-icon" src="icons/next.png" alt="Siguiente" width="24" height="24">
                     <button type="submit" class="btn">ENVIAR</button>
                 </div>
             </form>
-        </div>
+        </section>
     </div>
 
     <footer class="container text-center my-5">
         <div class="box text-center">
             <h3>Redes Sociales</h3>
             <div class="socials d-flex justify-content-center">
-                <a href="https://x.com/PMDGang" target="_blank"><img class="social-icon" src="fonts/twitter.png" alt="Twitter"></a>
-                <a href="https://www.instagram.com/mysterydungeonguild/" target="_blank"><img class="social-icon" src="fonts/instagram.png" alt="Instagram"></a>
-                <a href="https://www.reddit.com/r/MysteryDungeon/" target="_blank"><img class="social-icon" src="fonts/reddit.png" alt="Reddit"></a>
+                <a href="https://x.com/PMDGang" target="_blank">
+                    <img class="social-icon" src="icons/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/mysterydungeonguild/" target="_blank">
+                    <img class="social-icon" src="icons/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.reddit.com/r/MysteryDungeon/" target="_blank">
+                    <img class="social-icon" src="icons/reddit.png" alt="Reddit">
+                </a>
             </div>
         </div>
     </footer>

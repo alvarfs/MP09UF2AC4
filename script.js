@@ -9,6 +9,7 @@ const volumeSelected = document.querySelector(".volume-selected");
 
 let isDragging = false;
 
+volumeContainer.hidden = true;
 volumeIcon.hidden = false;
 volumeBar.hidden = true;
 intro.addEventListener('click', enterPage);
@@ -82,6 +83,7 @@ function enterPage() {
 
     setTimeout(() => {
         intro.hidden = true;
+        volumeContainer.hidden = false;
 
         audio.volume = 0.5;
         audio.play()

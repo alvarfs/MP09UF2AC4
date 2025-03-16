@@ -9,7 +9,7 @@
 
 body {
   background: linear-gradient(-45deg,
-  rgb(223, 86, 12), rgb(223, 149, 12), rgb(218, 218, 11), rgb(12, 210, 12), rgb(12, 210, 210), rgb(12, 144, 210));
+  red, orange, yellow, lime, cyan, blue);
   background-size: 400% 400%;
   animation: arcoiris 50s linear infinite;
   font-family: 'PKMN', 'Press Start 2P', cursive;
@@ -71,6 +71,7 @@ body {
   border-radius: 8px;
   text-align: center;
   width: 88px;
+  z-index: 68;
 }
 
 .volume-bar {
@@ -198,6 +199,11 @@ video {
   @media (max-width: 768px) { 
     width: 320px;
     height: 180px; 
+  }
+
+  @media (max-width: 468px) { 
+    width: 256px;
+    height: 144px; 
   }
 }
 
